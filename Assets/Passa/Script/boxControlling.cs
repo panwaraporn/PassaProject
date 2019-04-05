@@ -26,6 +26,7 @@ public class boxControlling : MonoBehaviour
         if (Input.GetKey("left"))
         {
             gameObject.transform.Translate(Vector3.left * Time.deltaTime);
+            
         }
 
         if (Input.GetKey("right"))
@@ -34,4 +35,3 @@ public class boxControlling : MonoBehaviour
         }
     }
 }
-212

@@ -14,4 +14,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Passa/Scenes/scene1.unity
     guid: 8090f4e2109cb7447a8363ac043d0a4b
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.addressableassets: {fileID: 11400000, guid: 95d990ccfde16db44b2bd664af361542,
+      type: 2}
