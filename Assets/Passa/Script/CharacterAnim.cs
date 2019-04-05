@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CharacterAnim : MonoBehaviour
 {
-    private Animator anim;
+    public Animator anim;
     int Jump = Animator.StringToHash("Jump");
 
     // Start is called before the first frame update
@@ -16,7 +16,7 @@ public class CharacterAnim : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
+        if (Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetBool("isRunning", true);
         }

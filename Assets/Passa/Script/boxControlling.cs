@@ -3,7 +3,7 @@ using System.Collections;
 
 public class boxControlling : MonoBehaviour
 {
-
+    public Animator anim;
     // Use this for initialization
     void Start()
     {
@@ -15,7 +15,12 @@ public class boxControlling : MonoBehaviour
     {
         if (Input.GetKey("up"))
         {
-            gameObject.transform.Translate(Vector3.forward * Time.deltaTime);
+           gameObject.transform.Translate(Vector3.forward * Time.deltaTime);
+            anim.SetBool("isRunning", false);
+        }
+        else
+        {
+            anim.SetBool("isRunning", true);
         }
 
         if (Input.GetKey("down"))
@@ -26,7 +31,6 @@ public class boxControlling : MonoBehaviour
         if (Input.GetKey("left"))
         {
             gameObject.transform.Translate(Vector3.left * Time.deltaTime);
-            
         }
 
         if (Input.GetKey("right"))
