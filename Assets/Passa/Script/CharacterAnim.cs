@@ -6,11 +6,13 @@ public class CharacterAnim : MonoBehaviour
 {
     public Animator anim;
     int Jump = Animator.StringToHash("Jump");
+    public Rigidbody2D rigid;
 
     // Start is called before the first frame update
     void Start()
     {
         anim = GetComponent<Animator>();
+        rigid.AddForce(new Vector3(0, 0, 0));
     }
 
     // Update is called once per frame
@@ -24,9 +26,14 @@ public class CharacterAnim : MonoBehaviour
         {
             anim.SetBool("isRunning", false);
         }
+
+
         if (Input.GetKeyDown(KeyCode.Space)){
             anim.SetTrigger(Jump);
          }
+
+
+
          
         /*
         float move = Input.GetAxis("Vertical");
