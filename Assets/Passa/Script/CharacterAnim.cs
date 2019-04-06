@@ -21,6 +21,7 @@ public class CharacterAnim : MonoBehaviour
         if (Input.GetKey(KeyCode.RightArrow))
         {
             anim.SetBool("isRunning", true);
+            gameObject.transform.Translate(Vector3.forward * Time.deltaTime);
         }
         else
         {
@@ -36,6 +37,6 @@ public class CharacterAnim : MonoBehaviour
 
     void FixedUpdate()
     {
-        
+       
     }
 }

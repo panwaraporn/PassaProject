@@ -16,10 +16,10 @@ public class PlayerScript : MonoBehaviour
         rigid.AddForce(movement*speed);
 
         if (v == 0 && h == 0) {
-            animator.SetBool("Walk", false);
+            animator.SetBool("isRunning", false);
         }else
         {
-            animator.SetBool("Walk", true);
+            animator.SetBool("isRunning", true);
         }
       
     }
