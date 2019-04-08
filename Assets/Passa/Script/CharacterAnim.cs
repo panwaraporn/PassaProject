@@ -25,6 +25,7 @@ public class CharacterAnim : MonoBehaviour
         }
         else
         {
+            //anim.SetBool("isRunning", true);
             anim.SetBool("isRunning", false);
         }
 
